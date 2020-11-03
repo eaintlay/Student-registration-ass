@@ -1,6 +1,7 @@
 package com.mmit.controller;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.persistence.EntityManagerFactory;
@@ -22,9 +23,8 @@ import com.mmit.entity.Course;
 
 @WebServlet({"/course-add","/courses","/course-edit","/course-delete"})
 public class CourseController extends HttpServlet{
-	/**
-	 * 
-	 */
+	
+	
 	private static final long serialVersionUID = 1L;
 	private CourseService courseService;
 	@Override
@@ -33,7 +33,7 @@ public class CourseController extends HttpServlet{
 		EntityManagerFactory EMF=null;
 		Object obj=getServletContext().getAttribute("emf");//application scope
 		if(obj==null) {
-			EMF=Persistence.createEntityManagerFactory("jpa-jsp-Student-Asg");
+			EMF=Persistence.createEntityManagerFactory("jpa-jsp-Student");
 			getServletContext().setAttribute("emf", EMF);
 		}else {
 			EMF=(EntityManagerFactory) obj;

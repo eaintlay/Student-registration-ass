@@ -28,7 +28,7 @@ public class ClassesController extends HttpServlet{
 		EntityManagerFactory EMF=null;
 		Object obj=getServletContext().getAttribute("emf");//application scope
 		if(obj==null) {
-			EMF=Persistence.createEntityManagerFactory("jpa-jsp-Student-Asg");
+			EMF=Persistence.createEntityManagerFactory("jpa-jsp-Student");
 			getServletContext().setAttribute("emf", EMF);
 		}else {
 			EMF=(EntityManagerFactory) obj;

@@ -16,7 +16,7 @@ class JpaTest {
 	private static EntityManagerFactory emf;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		emf=Persistence.createEntityManagerFactory("jpa-jsp-Student-Asg");
+		emf=Persistence.createEntityManagerFactory("jpa-jsp-Student");
 	}
 
 	@AfterAll
